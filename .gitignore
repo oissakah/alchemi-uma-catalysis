@@ -1,0 +1,37 @@
+# Python environments and caches
+.conda-env/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.cache/
+wandb/
+
+# Datasets, checkpoints and scientific scratch files
+data/*
+!data/README.md
+datasets/
+*.lmdb
+*.mdb
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.extxyz
+*.traj
+*.npy
+*.npz
+
+# GPU/SLURM logs, large outputs and generated archives
+*.log
+*.err
+slurm-*.out
+*.zip
+*.tar.gz
+results/production_500/
+results/pilot_500/*.csv
+results/pilot_500/stage_timing/
+results/figures/
+.DS_Store

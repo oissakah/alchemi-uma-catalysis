@@ -1,0 +1,19 @@
+# Draft manuscript Results
+
+## Throughput and resource efficiency
+
+We benchmarked three replicates of five GPU scheduling configurations on a 500-structure, 39,123-atom subset of OC20-Dense OOD validation using UMA and FIRE relaxation on a single NVIDIA L40S. Inflight batching with a maximum of four active structures and a 360-atom capacity delivered the highest throughput among the tested configurations, processing **0.2242 ± 0.0001 structures s⁻¹** (mean ± sample SD; n=3). This represents a **1.69-fold** increase over B1 (**0.1327 ± 0.0004 structures s⁻¹**) and a **16.6%** increase over fixed B4 (**0.1922 ± 0.0001 structures s⁻¹**; Fig. 1). Mean workload completion time decreased from **62.81 min** for B1 to **37.17 min** for inflight B4, a **40.8%** reduction (Fig. 2).
+
+Increasing inflight capacity beyond four active structures did not improve throughput in this workload. Inflight B16 reached **96.9%** average GPU utilization and **41.71 GiB** peak observed memory but achieved only **0.1385 structures s⁻¹**, compared with **85.1%** utilization, **14.15 GiB** peak memory, and **0.2242 structures s⁻¹** for inflight B4 (Figs. 3–4). Thus, maximizing GPU occupancy did not maximize completed relaxations per unit time. The tested capacity range does not establish a global optimum.
+
+## Relaxation behavior and numerical consistency
+
+Across **1,500** matched structure–replicate comparisons between B1 and inflight B4, the workflows agreed on convergence status in **1486 (99.07%)** comparisons and recorded identical optimization step counts in **1409 (93.93%)** (Figs. 5–6). Among the **567** comparisons where both methods converged, the mean absolute final-energy difference was **0.0036 meV atom⁻¹**, with a 95th percentile of **0.0227 meV atom⁻¹** (Fig. 7). Among B1-converged comparisons, **567/578 (98.1%)** also converged with inflight. These results indicate close agreement between the two implementations for this workload; they do not assess either method against DFT reference energies.
+
+## Final-geometry agreement and exceptional configurations
+
+A separate one-pass coordinate-capture experiment showed that, among the **183** structures whose saved final forces were below the 0.05 eV Å⁻¹ threshold in both workflows, the median mobile-atom RMSD was **0.0100 Å** and **181/183 (98.9%)** were within **0.10 Å** (Fig. 8). Only two such structures exceeded 0.10 Å: samples 208 and 155. Their mobile-atom RMSDs were **1.005 Å** and **0.617 Å**, respectively, despite relatively small total-energy differences (**0.0206 eV** and **0.0407 eV**; Figs. 9–10). In sample 208, rigid alignment reduced the adsorbate internal RMSD to **0.008 Å**, consistent with a change in placement or orientation of a largely unchanged molecule. Sample 155 retained **0.798 Å** adsorbate RMSD after alignment, consistent with a change in internal conformation, without establishing a distinct energy minimum.
+
+The coordinate-capture run and the production benchmark used different convergence-status accounting, and their raw agreement percentages should not be pooled. The geometry result is therefore reported **conditionally on both captured endpoints satisfying the final-force threshold**. Together, these observations show that inflight scheduling can substantially increase throughput while retaining B1-like relaxation outcomes and, for most jointly successful structures, very similar final coordinates. Rare trajectory-sensitive endpoints remain a limitation and a target for future analysis.
+
+*[Draft for technical review; add references to methods, dataset, toolkit, and model before submission. Figure numbering refers to the Phase 5 package.]*
