@@ -1,20 +1,21 @@
-# Release status — internal preview
+# Release status — private research preview
 
-The GitHub repository was initialized directly from files available in the ChatGPT project conversation. It is currently **private**.
+**GitHub integration:** the validated production scripts, HPC launchers, selected derived CSVs, and 12 publication figures (PNG + SVG) have been synchronized from the uploaded Swan review archive. This is a private research preview, not a peer-reviewed or submission-ready public release.
 
-## Included in this preview
+## Included
 
-- Working manuscript v0.1 and scientific claim boundaries.
-- Selected Phase 5 derived results and master summary table.
-- Analysis and geometry-capture scripts supplied through the conversation.
-- Site-specific geometry validation resume SLURM script.
+- Swan production B1, fixed B4 and inflight B4/B8/B16 launchers and corresponding source code
+- 500-structure deterministic manifest, 10-structure numerical-equivalence diagnostic
+- Production performance summary and B1/inflight matched comparison CSV
+- Geometry comparison CSV and outlier tables, but **not** the underlying final coordinate files
+- 12 publication figures in PNG and SVG; draft manuscript and scientific limitations
 
-## Not yet included / not yet verified
+## Still required before public release
 
-- **Exact validated production-run source from Swan:** the earlier initial scaffold archive does not reflect all subsequent fixes and is deliberately **not** represented as the executed benchmark implementation.
-- The five original source inputs for rebuilding all Phase 5 figures (production summary, B1/inflight matched table, geometry comparison, and two final-structure extxyz files).
-- Full set of publication PNG/SVG figures (available in the Phase 5 conversation archive, pending transfer to GitHub).
-- A fresh-environment end-to-end reproduction, complete citations and verified dataset redistribution rights.
-- A resolved explanation for the difference between production exit-state convergence labels and post-hoc geometry-capture force-threshold labels.
+- Independently test reproduction from a clean environment and pin the full dependency lockfile
+- Verify OC20-Dense and UMA checkpoint redistribution and attribution terms
+- Resolve production exit-state vs geometry-capture post-hoc force-threshold bookkeeping
+- Audit manuscript references, figures, author list and scientific claims
+- Decide whether and how to share final structure coordinates; without them, some figures cannot be regenerated from the public repo alone
 
-The repository is a **research preview**, not a submission-ready or independently reproducible public release. Do not publish as final until the above items are addressed.
+**No unpublished PFAS calculations or raw proprietary data are included.**

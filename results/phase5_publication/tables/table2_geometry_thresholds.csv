@@ -1,0 +1,9 @@
+subset,n,rmsd_threshold_A,n_within,fraction_within
+all_500,500,0.05,382,0.764
+all_500,500,0.1,459,0.918
+all_500,500,0.25,487,0.974
+all_500,500,0.5,493,0.986
+both_below_threshold_183,183,0.05,174,0.9508196721311475
+both_below_threshold_183,183,0.1,181,0.9890710382513661
+both_below_threshold_183,183,0.25,181,0.9890710382513661
+both_below_threshold_183,183,0.5,181,0.9890710382513661

@@ -1,0 +1,21 @@
+model:
+  checkpoint: uma-s-1p2p1
+  task: oc20
+  device: cuda
+  inference_settings: default
+
+sampling:
+  n_structures: 500
+  seed: 42
+  equivalence_n: 50
+
+relaxation:
+  fmax_eV_A: 0.05
+  max_steps: 300
+  fire_dt: 0.1
+
+benchmark:
+  batch_sizes: [1, 2, 4, 8, 16, 32]
+  telemetry_interval_s: 0.5
+  inflight_max_batch_size: 16
+  inflight_max_atoms: 3000

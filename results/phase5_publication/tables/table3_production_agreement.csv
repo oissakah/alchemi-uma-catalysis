@@ -1,0 +1,5 @@
+outcome,count
+both_not_converged,919
+both_converged,567
+b1_only_converged,11
+inflight_only_converged,3

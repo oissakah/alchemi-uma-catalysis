@@ -245,7 +245,8 @@ ax.bar(
     yerr=summary["structures_per_s_std"].fillna(0),
     capsize=4,
 )
-ax.set_xticks(x, labels, rotation=20, ha="right")
+ax.set_xticks(x)
+ax.set_xticklabels(labels, rotation=20, ha="right")
 ax.set_ylabel("Structures per second")
 ax.set_title("How fast each method processes structures")
 fig.tight_layout()
@@ -260,7 +261,8 @@ ax.bar(
     yerr=summary["wall_s_std"].fillna(0) / 60.0,
     capsize=4,
 )
-ax.set_xticks(x, labels, rotation=20, ha="right")
+ax.set_xticks(x)
+ax.set_xticklabels(labels, rotation=20, ha="right")
 ax.set_ylabel("Minutes for 500 structures")
 ax.set_title("Time needed to finish the 500-structure workload")
 fig.tight_layout()
@@ -275,7 +277,8 @@ ax.bar(
     yerr=summary["gpu_util_pct_std"].fillna(0),
     capsize=4,
 )
-ax.set_xticks(x, labels, rotation=20, ha="right")
+ax.set_xticks(x)
+ax.set_xticklabels(labels, rotation=20, ha="right")
 ax.set_ylabel("Mean GPU utilization (%)")
 ax.set_ylim(0, 100)
 ax.set_title("A busier GPU is not always a faster workflow")
@@ -286,7 +289,8 @@ plt.close(fig)
 # Figure 4: peak GPU memory
 fig, ax = plt.subplots(figsize=(8, 5))
 ax.bar(x, summary["peak_gpu_memory_gb"])
-ax.set_xticks(x, labels, rotation=20, ha="right")
+ax.set_xticks(x)
+ax.set_xticklabels(labels, rotation=20, ha="right")
 ax.set_ylabel("Peak GPU memory (GB)")
 ax.set_title("Peak GPU memory use")
 fig.tight_layout()
@@ -301,7 +305,8 @@ ax.bar(
     yerr=summary["convergence_fraction_std"].fillna(0) * 100.0,
     capsize=4,
 )
-ax.set_xticks(x, labels, rotation=20, ha="right")
+ax.set_xticks(x)
+ax.set_xticklabels(labels, rotation=20, ha="right")
 ax.set_ylabel("Structures reaching the force target (%)")
 ax.set_ylim(0, 100)
 ax.set_title("Fraction of structures that finish within 300 steps")

@@ -1,4 +1,4 @@
-# Python environments and caches
+# Local environments and Python caches
 .conda-env/
 .venv/
 venv/
@@ -9,7 +9,7 @@ __pycache__/
 .cache/
 wandb/
 
-# Datasets, checkpoints and scientific scratch files
+# Model weights and raw datasets
 data/*
 !data/README.md
 datasets/
@@ -19,19 +19,25 @@ datasets/
 *.pth
 *.ckpt
 *.safetensors
+
+# Raw geometries, trajectories and arrays
 *.extxyz
 *.traj
 *.npy
 *.npz
 
-# GPU/SLURM logs, large outputs and generated archives
+# HPC job outputs and archives
 *.log
 *.err
 slurm-*.out
 *.zip
 *.tar.gz
-results/production_500/
-results/pilot_500/*.csv
+
+# Generated intermediate results (allow selected tracked summaries)
 results/pilot_500/stage_timing/
+results/production_500/fixed_b*/
+results/production_500/inflight_b*/
+results/production_500/analysis/figures/
+results/production_500/analysis/final/figures/
 results/figures/
 .DS_Store

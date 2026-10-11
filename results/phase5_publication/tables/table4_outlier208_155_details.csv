@@ -1,0 +1,3 @@
+sample_idx,adsorbate_formula,n_adsorbate_atoms,slab_rmsd_A_no_alignment,adsorbate_rigid_aligned_rmsd_A,mobile_rmsd_A,adsorbate_rmsd_A,abs_delta_energy_eV,both_below_threshold
+155,C2H8N2,12,0.008999028523665792,0.7975048076672263,0.6171459420410912,0.9424768920674356,0.04071044921875,True
+208,CH2O,4,0.024292515069452892,0.007734481903209634,1.0047397908449525,2.069614018511803,0.02056884765625,True

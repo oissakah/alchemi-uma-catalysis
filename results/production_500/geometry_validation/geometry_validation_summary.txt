@@ -1,0 +1,33 @@
+Geometry validation — B1 vs inflight B4
+========================================
+
+Structures compared: 500
+B1 coordinate-capture wall time: reused existing capture
+Inflight B4 coordinate-capture wall time: 35.85 min
+Convergence agreement in this capture run: 92.80%
+
+Geometry differences, all structures:
+  median mobile-atom RMSD: 0.023222 A
+  95th percentile mobile-atom RMSD: 0.135909 A
+  maximum mobile-atom RMSD: 1.004740 A
+
+Geometry differences, cases where both methods converged:
+  n: 183
+  median mobile-atom RMSD: 0.009980 A
+  95th percentile mobile-atom RMSD: 0.046194 A
+  maximum mobile-atom RMSD: 1.004740 A
+  median adsorbate RMSD: 0.018489 A
+  95th percentile adsorbate RMSD: 0.092544 A
+
+Largest mobile-atom RMSD cases:
+ sample_idx  same_convergence  rmsd_mobile_A  rmsd_adsorbate_A  max_displacement_mobile_A  abs_delta_energy_meV_atom
+        208              True       1.004740          2.069614                   2.614347                   0.395555
+        327              True       0.657553          1.376734                   3.478990                   0.640869
+        163              True       0.645934          1.779710                   1.940286                   4.138326
+        155              True       0.617146          0.942477                   1.590174                   0.535664
+        133              True       0.592589          0.836643                   1.258845                   0.136289
+        324              True       0.581607          1.206363                   3.627138                   2.022008
+        325             False       0.565591          0.951876                   1.880870                   0.689627
+        389              True       0.400478          1.385249                   1.597030                  24.045105
+        312             False       0.365698          0.354784                   1.134928                   2.781544
+         13              True       0.346086          0.913074                   1.625575                   2.121582

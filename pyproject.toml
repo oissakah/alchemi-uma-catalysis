@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alchemi-uma-catalysis"
+version = "0.1.0"
+description = "Reproducible ALCHEMI + UMA catalyst-relaxation benchmark"
+requires-python = ">=3.11"
+dependencies = [
+  "pandas",
+  "matplotlib",
+  "pyyaml",
+  "lmdb",
+  "tqdm",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

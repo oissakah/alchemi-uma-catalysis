@@ -1,0 +1,21 @@
+ALCHEMI + UMA production analysis
+==================================
+
+Performance summary:
+      method  n_replicates  wall_s_mean  wall_s_std  wall_min_mean  structures_per_s_mean  structures_per_s_std  atoms_per_s_mean  gpu_util_pct_mean  gpu_util_pct_std  peak_gpu_memory_gb  convergence_fraction_mean  convergence_fraction_std  speedup_vs_b1  time_saved_vs_b1_pct
+          B1             3  3768.656285   11.549207      62.810938               0.132674              0.000406         10.381219          56.332239          0.153222            6.620117                   0.385333                  0.001155       1.000000              0.000000
+    Fixed B4             3  2600.982353    1.266900      43.349706               0.192235              0.000094         15.041627          87.240568          0.129880           13.012695                   0.280667                  0.002309       1.448927             30.983827
+ Inflight B4             3  2229.916261    1.098657      37.165271               0.224224              0.000110         17.544608          85.114507          0.048048           14.153320                   0.380000                  0.004000       1.690034             40.829938
+ Inflight B8             3  2570.239131    9.741964      42.837319               0.194536              0.000736         15.221686          92.598703          0.033099           33.649414                   0.384667                  0.001155       1.466272             31.799588
+Inflight B16             3  3609.528923   37.581091      60.158815               0.138532              0.001450         10.839598          96.946100          0.063302           41.713867                   0.381333                  0.002309       1.044155              4.222390
+
+B1 vs inflight B4:
+Matched comparisons: 1500
+Convergence agreement: 99.07%
+Exact step-count agreement: 93.93%
+Convergence disagreements: 14
+Both converged comparisons: 567
+Mean |energy difference| for both-converged cases: 0.000267917 eV
+Mean |energy difference| per atom for both-converged cases: 0.00360817 meV/atom
+95th percentile |energy difference| per atom: 0.0226651 meV/atom
+Maximum |energy difference| per atom: 0.102856 meV/atom
