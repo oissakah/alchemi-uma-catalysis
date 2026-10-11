@@ -13,11 +13,7 @@ GPU-accelerated heterogeneous catalyst relaxation with the **NVIDIA ALCHEMI Tool
 
 ## Main figures
 
-![Throughput](figures/fig01_throughput.png)
-
-![Utilization versus throughput](figures/fig03_utilization_vs_throughput.png)
-
-![Geometry agreement](figures/fig08_geometry_rmsd_distribution.png)
+The Phase 5 PNG/SVG figure assets are retained in the conversation's publication package and are **pending GitHub transfer**. Numerical values and a selected derived table are included in this preview. Please do not interpret missing image assets as a successful full figure release.
 
 ## Important interpretation
 
@@ -25,12 +21,9 @@ These are **two distinct experiments**: a three-replicate production benchmark f
 
 ## Navigate
 
-- [Full Results and interpretation](docs/RESULTS.md)
 - [Paper-style Results draft](paper/RESULTS_DRAFT.md)
 - [Master performance table](tables/table1_master_results.csv)
-- [Geometry threshold table](tables/table2_geometry_thresholds.csv)
-- [Figure captions](docs/FIGURE_CAPTIONS.md)
-- [Methods and reproduction](docs/METHODS_AND_REPRODUCIBILITY.md)
+- [Release status and missing inputs](../../docs/RELEASE_STATUS.md)
 
 ## Rebuild the package
 
@@ -40,4 +33,4 @@ Copy `scripts/10_build_phase5.py` into the benchmark project's `scripts/` folder
 python scripts/10_build_phase5.py
 ```
 
-The builder reads the existing CSV and extxyz outputs. **No GPU job is required.** The original repository remains the source of the dataset manifest, numerical equivalence diagnostics, benchmarking scripts, and SLURM job configurations.
+The builder reads the existing CSV and extxyz outputs. **No GPU job is required.** The exact validated production-run scripts and five source inputs still need to be synchronized from Swan before independent reproduction can be claimed.
